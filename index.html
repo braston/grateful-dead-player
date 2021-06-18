@@ -16,6 +16,19 @@
 
 </head>
 <body>
+    <!-- Menu Sidebar -->
+    <div class="sideBar-Year" id="sideBarYear">  </div>
+    <div class="sideBar-hidden" id="sideBarDate"></div>
+    <div class="sideBar-hidden" id="sideBarShow"></div>
+    <div class="sideBar-hidden" id="sideBarSetlist"></div>
+
+    <!-- Menu Toggle Icon -->
+    <div class="container-menu-icon change" onclick="menuIcon(this)" id='menuToggle'>
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
     <!-- Audio Object -->
     <div class="container">
         <div class="archiveHTML container-item">Play Dead Music Player</div>
@@ -34,6 +47,7 @@
 
 
     <!-- Script -->
+    <script src="fetchShows.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

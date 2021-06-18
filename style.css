@@ -32,6 +32,164 @@ audio {
     background-color: var(--main-bg-light);
 }
 
+/* Menu Icon Styling */
+.container-menu-icon {
+    display: inline-block;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 95vw;
+    z-index: 10;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  /* Sidebar Styling */
+
+.sideBar-Year {
+    background-color: var(--main-bg-dark);
+    display:flex;
+    flex-direction: column;
+    margin-left: 0;
+    height: 100vh;
+    position: fixed;
+    width:10vw;
+    z-index: 10;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.sideBar-Date {
+    background-color: var(--main-bg-dark);
+    display:flex;
+    flex-direction: column;
+    margin-left: 10vw;
+    height: 100vh;
+    position: fixed;
+    width:10vw;
+    z-index: 10;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.sideBar-Show {
+    background-color: var(--main-bg-dark);
+    display:flex;
+    flex-direction: column;
+    margin-left: 20vw;
+    height: 100vh;
+    position: fixed;
+    width:40vw;
+    z-index: 10;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.sideBar-Setlist{
+    background-color: var(--main-bg-dark);
+    display:flex;
+    flex-direction: column;
+    margin-left: 60vw;
+    height: 100vh;
+    position: fixed;
+    width:40vw;
+    z-index: 10;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.sideBar-hidden {
+    display:none;
+}
+
+.sideBarItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-light);
+    margin: 2%;
+    width: 90%;
+    height: 10%;
+    font-family: 'Metamorphous', cursive;
+    font-size: 1.75em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sideBarItemDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-light);
+    margin: 2%;
+    width: 90%;
+    font-family: 'Metamorphous', cursive;
+    font-size: 1.25em;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sideBarItemShow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-light);
+    margin: 2%;
+    width: 90%;
+    font-family: 'Metamorphous', cursive;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sideBarItemShowTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-dark);
+    color: var(--main-bg-light);
+    margin: 2%;
+    width: 90%;
+    height: 10%;
+    font-family: 'Metamorphous', cursive;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+.sideBarItem:hover{
+    transform: scale(1.1);
+    /* transform: translateY(-5px); */
+}
+
+.sideBarItemDate:hover{
+    transform: scale(1.05);
+    /* transform: translateY(-5px); */
+}
+
+.sideBarItemShow:hover{
+    transform: scale(1.05);
+    /* transform: translateY(-5px); */
+}
+
 .container {
     display:flex;
     flex-direction: column;
@@ -138,5 +296,6 @@ audio {
         width:250px;
     }
 }
+
 
 
