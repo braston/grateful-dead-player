@@ -1,7 +1,5 @@
-const audioContent = document.getElementById('audioContent');
-const audioButton = document.getElementById('audioButton');
-const audioPlayer = document.getElementById('audio');
-const displayTitle = document.getElementById('displayTitle');
+
+
 
 let audioURL = 'https://archive.org/embed/gd1977-12-30.sbd.cribbs.30624.sbeok.shnf&output=json';
 // https://archive.org/search.php?query=grateful+dead+1977&and%5B%5D=mediatype%3A%22etree%22&and%5B%5D=year%3A%221977%22&sort=date&output=json
@@ -35,7 +33,3 @@ async function getAudio () {
     console.log(data); 
     createPlaylist(data);
 }
-
-audioButton.addEventListener('click', getAudio);
-
-//getShows();

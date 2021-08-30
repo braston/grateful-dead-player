@@ -16,12 +16,15 @@
 
 </head>
 <body>
+    <!-- Loader -->
+    <div class="loader" id="loader" hidden="true"></div>
     <!-- Menu Sidebar -->
     <div class="sideBar-Year" id="sideBarYear">  </div>
     <div class="sideBar-hidden" id="sideBarDate"></div>
     <div class="sideBar-hidden" id="sideBarShow"></div>
     <div class="sideBar-hidden" id="sideBarSetlist"></div>
-
+    <div class="sideBar-hidden" id="sideBarLoadedSongs"></div>
+    
     <!-- Menu Toggle Icon -->
     <div class="container-menu-icon change" onclick="menuIcon(this)" id='menuToggle'>
         <div class="bar1"></div>
@@ -29,18 +32,25 @@
         <div class="bar3"></div>
       </div>
 
+      <!-- Layout Container -->
+
     <!-- Audio Object -->
     <div class="container">
         <div class="archiveHTML container-item">Play Dead Music Player</div>
-        <div class="buttonContainer container-item">    
-            <button class="audioButton" id="audioButton">Click For A Show!</button>
-        </div>
-        <div class="audio-container container-item" id='audio-container'>
-            <div class="displayTitle" id="displayTitle" hidden></div>
-            <audio src="" class="container-item" id="audio" controls hidden>TESTING TEXT</audio> 
+        <div class="audio-container container-item-hidden" id='audio-container'>
+            <div class="displayTitle" id="displayTitle"></div>
+            <audio src="" class="container-item" id="audio"></audio> 
+            <div class="audioButtonContainer" id="audioButtonContainer">
+                <button class="audioButton" id="audioToggleButton">Play</button>
+                <button class="audioButton" id="audioBW"><<</button>
+                <button class="audioButton" id="audioFW">>></button>
+                <button class="audioButton" id="songDisplayToggle">Songs</button>
+            </div>  
         </div>
         <div class="audioContent container-item" id="audioContent"></div>     
     </div>
+    
+
 
 
 

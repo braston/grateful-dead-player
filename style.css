@@ -21,6 +21,7 @@ body {
     background-attachment:fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 audio {
@@ -30,13 +31,33 @@ audio {
     border-radius: 20px;
     padding: 10px;
     background-color: var(--main-bg-light);
+    width: 40vw;
 }
+
+/* Loader Animation */
+.loader {
+    border: 16px solid var(--main-bg-light); /* Light grey */
+    border-top: 16px solid var(--main-palette-3); /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.5s linear infinite;
+    margin-left: 45vw;
+    z-index: 10;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 /* Menu Icon Styling */
 .container-menu-icon {
+    position:fixed;
     display: inline-block;
     flex-direction: column;
     cursor: pointer;
+    margin-top: 2.5vh;
     margin-left: 95vw;
     z-index: 10;
   }
@@ -115,6 +136,41 @@ audio {
     scrollbar-width: none;
 }
 
+.sideBar-LoadedSongs{
+    background-color: var(--main-bg-dark);
+    display:flex;
+    flex-direction: column;
+    margin-left: 80vw;
+    margin-top:10vh;
+    position: fixed;
+    width:50vw;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.slide-out{
+    animation: slide-out 3s linear 3s both;
+}
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-out {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+
 .sideBar-hidden {
     display:none;
 }
@@ -175,6 +231,20 @@ audio {
     border-radius: 10px;
 }
 
+.sideBarItemSetlist {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: var(--main-bg-dark);
+    color: var(--main-bg-light);
+    margin: 1%;
+    width: 90%;
+    /* height: 10%; */
+    font-family: 'Metamorphous', cursive;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
 .sideBarItem:hover{
     transform: scale(1.1);
     /* transform: translateY(-5px); */
@@ -190,17 +260,69 @@ audio {
     /* transform: translateY(-5px); */
 }
 
+/* Audio Content Container */
+
+.audio-container {
+   
+}
+
+.audioContent {
+    /* overflow-y: scroll; */
+    height: 60vh;
+    width: 30vw;
+}
+
+.audioButton {
+    width: 10vw;
+    height:5vh;
+    font-family: 'Metamorphous', cursive;
+    font-size: 1.5em;
+    border-radius: 10px;  
+}
+
+.audioButton:hover {
+    transform: scale(1.1);
+}
+
+.song {
+    background-color: var(--main-bg-light);
+    font-size: 15px;
+    font-family: 'Metamorphous', cursive;
+    padding: 3px;
+    margin: 1px 5px 1px 5px;
+    width:22rem;
+    max-width: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--main-palette-2);
+    text-align: left;
+}
+
+.song:hover {
+    transform: scale(1.025);
+    color: var(--main-bg-dark);
+    cursor: pointer;
+    background-color: var(--main-palette-1);
+}
+
 .container {
     display:flex;
     flex-direction: column;
     justify-content: center;
 }
 
+
 .container-item{
     margin: auto;
     margin-top:10px;
     padding:0;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-item-hidden{
+    display:none;
 }
 
 
@@ -210,40 +332,35 @@ audio {
     font-size: 5em;
     font-family: 'Metamorphous', cursive;
     border-radius: 20px;
-    padding: 10px;
+    padding: 1.5rem;
     border-style: solid;
     border-width: 2px;
     border-color: var(--main-palette-2);
     
 } 
 
-.song {
-    background-color: var(--main-bg-light);
-    font-size: 15px;
-    font-family: 'Metamorphous', cursive;
-    padding: 5px;
-    border-radius: 20px;
-    margin:5px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: var(--main-palette-2);
-    text-align: center;
-}
-
-.song:hover {
-    transform: scale(1.2);
-    color: var(--main-bg-dark);
-}
-
 .displayTitle {
     background-color: var(--main-bg-light);
-    font-size: 2em;
+    font-size: 1.8em;
     font-family: 'Metamorphous', cursive;
     border-radius: 10px;
     padding:10px;
     border-style: solid;
     border-width: 2px;
     border-color: var(--main-palette-2);
+    width: 45vw;
+    text-align: center;
+}
+
+.displayTitle:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.displayText {
+    font-size: 0.5em;
+    text-align: center;
+    padding: 5px;
 }
 
 /* Mobile Response */
