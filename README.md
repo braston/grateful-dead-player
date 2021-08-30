@@ -1,4 +1,4 @@
-Grateful Dead Player
+#Grateful Dead Player
 This is an in-process project I'm working on. I haven't come across a decent web interface to search and stream Grateful Dead shows from Archive.org This project aims to address that- I'm planning to implement the following:
 
 Pull a show and create a playlist (Complete)
